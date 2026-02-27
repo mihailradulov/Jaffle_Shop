@@ -1,0 +1,15 @@
+sources:
+  - name: stripe
+    database: dbt_mradulov_raw
+    schema: stripe
+    tables:
+      - name: payment
+        config:
+          freshness:
+            warn_after:
+              count: 1
+              period: day
+            error_after:
+              count: 5
+              period: day
+          loaded_at_field: _batched_at
