@@ -1,3 +1,4 @@
+--This comment is added to test CI job
 select
     o.order_id,
     o.customer_id,
